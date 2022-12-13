@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 @Transactional
@@ -24,6 +26,10 @@ public class UserService {
         });
 
         return user;
+    }
+
+    public List<User> findAll(){
+        return userRepository.findAll();
     }
 
 }
