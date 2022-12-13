@@ -16,7 +16,8 @@ public class useController {
     }
 
     @GetMapping("/api/hello/1")
-    public User test2(){
-        return userService.find(1L);
+    public String test2(){
+//        return userService.find(1L);
+        return "api호출";
     }
 }
