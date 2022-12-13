@@ -14,4 +14,9 @@ public class useController {
     public String test(){
         return "여기는 메인입니다.";
     }
+
+    @GetMapping("/api/hello/1")
+    public User test2(){
+        return userService.find(1L);
+    }
 }
