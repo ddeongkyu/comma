@@ -4,12 +4,6 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-node {
-	version = '0.10.33'
-	npmVersion = '2.1.14'
-	download = true
-	workDir = file("${project.buildDir}/nodejs")
-}
 
 
 
