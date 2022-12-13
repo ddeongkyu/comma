@@ -19,6 +19,13 @@ node {
 	nodeProjectDir = file("${project.projectDir}/src/frontend")
 }
 
+// 5
+task buildAdmin(type: NpmTask) {
+	args = ['run', 'build']
+}
+
+processResources.dependsOn 'buildAdmin'
+
 
 group = 'f2b2'
 sourceCompatibility = '11'
