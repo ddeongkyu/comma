@@ -7,25 +7,6 @@ plugins {
 
 apply plugin: 'com.github.node-gradle.node'
 
-node {
-	// 2
-	version = '12.22.12'
-	npmVersion = '6.14.16'
-
-	// 3
-	download = true
-
-	// 4
-	nodeProjectDir = file("${project.projectDir}/src/frontend")
-}
-
-// 5
-task buildAdmin(type: NpmTask) {
-	args = ['run', 'build']
-}
-
-processResources.dependsOn 'buildAdmin'
-
 
 group = 'f2b2'
 sourceCompatibility = '11'
