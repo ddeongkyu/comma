@@ -2,9 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.6'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id "com.moowork.node" version "0.10"
 }
-    apply plugin: 'com.moowork.node'
 
 node {
 	version = '0.10.33'
