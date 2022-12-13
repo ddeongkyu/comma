@@ -18,4 +18,12 @@ public class UserService {
         return userRepository.findById(save.getId()).get();
     }
 
+    public User find(Long id){
+        User user = userRepository.findById(id).orElseThrow(()->{
+            return new RuntimeException("아");
+        });
+
+        return user;
+    }
+
 }
