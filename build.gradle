@@ -79,8 +79,3 @@ task copyReactBuildFiles(type: Copy) {
 	from "$frontendDir/build"
 	into "$projectDir/src/main/resources/static"
 }
-
-node {
-	download = true
-	version = "12.18.2"
-}
