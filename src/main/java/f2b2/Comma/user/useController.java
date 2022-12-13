@@ -10,10 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class useController {
 
     private final UserService userService;
-    @GetMapping("/api/hello/{userId}")
-    public User test(@PathVariable Long userId){
-
-        User user = userService.find(userId);
-        return user;
+    @GetMapping("/api/hello/")
+    public String test(){
+        return "여기는 메인입니다.";
     }
 }
