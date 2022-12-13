@@ -7,7 +7,7 @@ function App() {
   const [hello, setHello] = useState('')
 
   useEffect(() => {
-    axios.get('3.39.164.180:8080/api/hello/1')
+    axios.get('3.39.164.180:8080/api/user')
         .then(response => setHello(response.data))
         .catch(error => console.log(error))
   }, []);
