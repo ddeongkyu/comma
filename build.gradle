@@ -80,11 +80,10 @@ task copyReactBuildFiles(type: Copy) {
 	into "$projectDir/src/main/resources/static"
 }
 
-if (project.hasProperty('nodeInstall')) {
-	node {
+
+node {
 		version = "0.10.18"
 		npmVersion = "2.15.1"
 		yarnVersion = "1.2.1"
 		download = true
-	}
 }
