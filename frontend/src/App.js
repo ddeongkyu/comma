@@ -7,7 +7,7 @@ function App() {
   const [hello, setHello] = useState('')
 
   useEffect(() => {
-    axios.post('/api/hello/1')
+    axios.get('/api/hello/')
         .then(response => setHello(response.data))
         .catch(error => console.log(error))
   }, []);
