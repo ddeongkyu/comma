@@ -11,9 +11,9 @@ public class useController {
 
     private final UserService userService;
     @GetMapping("/api/hello/{userId}")
-    public String test(@PathVariable Long userId){
+    public User test(@PathVariable Long userId){
 
         User user = userService.find(userId);
-        return user.getName();
+        return user;
     }
 }
