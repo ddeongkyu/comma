@@ -5,6 +5,8 @@ plugins {
 	id "com.github.node-gradle.node" version "3.2.1"
 }
 
+apply plugin: 'com.github.node-gradle.node'
+
 group = 'f2b2'
 sourceCompatibility = '11'
 
