@@ -1,0 +1,20 @@
+// src/main/frontend/src/App.js
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+function App() {
+  const [hello, setHello] = useState("");
+
+  useEffect(() => {
+    axios
+      .get("3.39.164.180:8080/api/user")
+      .then((response) => setHello(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  console.log("git test...sorry....");
+  return <div>백엔드에서 가져온 데이터입니다 : {hello}</div>;
+}
+
+export default App;
